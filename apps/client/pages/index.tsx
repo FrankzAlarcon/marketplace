@@ -5,7 +5,7 @@ export function Index() {
   return (
     <Container>
       <Button variant='success'>Click me!</Button>
-      <Image src='https://via.placeholder.com/900x300'/>
+      <Image src='https://via.placeholder.com/900x300'/>      
     </Container>
   );
 }
