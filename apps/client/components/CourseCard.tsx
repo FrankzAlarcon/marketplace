@@ -2,7 +2,7 @@ import {Card} from 'react-bootstrap';
 
 export function CourseCard(props) {
   return (
-    <Card style={{width:'500px'}}>
+    <Card style={{width:'450px'}}>
     <Card.Body>
       <Card.Img src={props.src}/>
       <Card.Title>{props.title}</Card.Title>
