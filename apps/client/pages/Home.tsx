@@ -1,4 +1,5 @@
 import { Container, Carousel } from 'react-bootstrap';
+import CardsCarousel from '../components/CardsCarousel';
 import CourseCard from '../components/CourseCard';
 import { MainCarousel } from '../components/MainCarousel';
 const coursesData = [
@@ -64,12 +65,7 @@ export function Home() {
   return (
     <Container className='d-flex flex-column align-items-center'>
       <MainCarousel />
-      <Container className='d-flex justify-content-around'>      
-        {coursesData.map((course,index) => {
-          const {src,title,teacher, text, price} = course;
-          return (<CourseCard key={index} src={src} title={title} teacher={teacher} text={text} price={price} tags={course.tags}/>);       
-        })}
-      </Container>
+      <CardsCarousel coursesData={coursesData}/>
     </Container>
   );
 }

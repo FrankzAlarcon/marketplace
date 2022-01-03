@@ -25,7 +25,6 @@ export function MainCarousel() {
           src="https://escuelafullstack.com/web/image/slide.channel/22/image_512"
           alt="Second slide"
         />
-
         <Carousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -37,7 +36,6 @@ export function MainCarousel() {
           src="https://i.ytimg.com/vi/AR1tLGQ7COs/maxresdefault.jpg"
           alt="Third slide"
         />
-
         <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
