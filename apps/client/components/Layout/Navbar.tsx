@@ -4,7 +4,6 @@ import { UL } from '@components/List/UL';
 import { LI } from '@components/List/LI';
 import { Anchor } from '@components/List/Anchor';
 import { TextLinkLogo } from '@components/Logo/TextLinkLogo';
-import {BsCart2} from "react-icons"
 
 const MyNavbar = styled.nav`
   display: flex;
