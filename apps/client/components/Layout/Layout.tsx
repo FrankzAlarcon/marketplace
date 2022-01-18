@@ -1,10 +1,10 @@
 import { Footer } from './Footer';
-import { Navbar } from './Navbar';
+import { Header } from './Header';
 
-export const Layout = ({children}) => {
+export const Layout = ({ children }) => {
   return (
     <>
-      <Navbar />
+      <Header />
       <main>{children}</main>
       <Footer />
     </>

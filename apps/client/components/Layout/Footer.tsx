@@ -1,10 +1,9 @@
-import React from 'react'
+import { LinkLogo } from '@components/Logo/LinkLogo';
 
 export const Footer = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
-
+  return (
+    <div>
+      <LinkLogo />
+    </div>
+  );
+};
