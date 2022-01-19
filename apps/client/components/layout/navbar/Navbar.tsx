@@ -1,9 +1,8 @@
 import { Navbar, Container, Nav, Col } from 'react-bootstrap';
-import Link from 'next/link';
 import React from 'react';
 import Menu from './Menu';
-import { LinkLogo } from '@components/Logo/LinkLogo';
 import Search from './Search';
+import { LinkLogo } from '@components/logo/LinkLogo';
 
 const MyNavbar = () => {
   return (

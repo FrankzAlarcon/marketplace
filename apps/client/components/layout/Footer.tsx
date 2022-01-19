@@ -1,4 +1,4 @@
-import { LinkLogo } from '@components/Logo/LinkLogo';
+import { LinkLogo } from '@components/logo/LinkLogo';
 
 export const Footer = () => {
   return (

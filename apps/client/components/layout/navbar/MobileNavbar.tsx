@@ -2,9 +2,10 @@ import { Navbar, Container, Nav, Col, Row } from 'react-bootstrap';
 import Link from 'next/link';
 import React from 'react';
 import Menu from './Menu';
-import { LinkLogo } from '@components/Logo/LinkLogo';
+import { LinkLogo } from '@components/logo/LinkLogo';
 import Search from './Search';
 import Icon from '../icons/Icon';
+import { useMedia } from 'hooks/useMedia';
 
 const MobileNavbar = () => {
   const icons = [
