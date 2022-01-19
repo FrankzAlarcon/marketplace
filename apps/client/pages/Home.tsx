@@ -1,4 +1,5 @@
-import { Container, Carousel } from 'react-bootstrap';
+import { useEffect, useState } from 'react';
+import { Container, Carousel, Row, Col } from 'react-bootstrap';
 import CardsCarousel from '../components/CardsCarousel';
 import CourseCard from '../components/CourseCard';
 import { MainCarousel } from '../components/MainCarousel';
@@ -58,14 +59,49 @@ const coursesData = [
         bgColor: 'bg-secondary'
       }
     ]
-  }
+  },
+  {
+    src: 'https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2019/06/python.jpg?itok=XqTS1eVy',
+    title: 'Curso de Python',
+    teacher: 'Nombre de profesor',
+    text: 'En este curso aprederas a. ........',
+    price: 9.99,
+    tags: [
+      {
+        name: 'programacion',
+        bgColor: 'bg-info'
+      },
+      {
+        name: 'popular',
+        bgColor: 'bg-warning'
+      },
+      {
+        name: 'nuevo',
+        bgColor: 'bg-secondary'
+      }
+    ]
+  },
 ]
 
 export function Home() {
+  const [isTablet, setIsTablet] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(()=> {
+    setIsTablet(window.screen.width > 600 );
+    setIsMobile(window.screen.width < 400);
+    setIsDesktop(window.screen.width > 992);
+    window.addEventListener('resize', () => {
+      setIsTablet(window.screen.width > 600 );
+      setIsMobile(window.screen.width < 400);
+      setIsDesktop(window.screen.width > 992);
+      console.log(isDesktop)
+    })
+  }, []);
   return (
-    <Container className='d-flex flex-column align-items-center'>
-      <MainCarousel />
-      <CardsCarousel coursesData={coursesData}/>
+    <Container className='d-flex flex-column align-items-center' style={{width: '100%'}}>
+      <MainCarousel isDesktop={isDesktop} />
+      <CardsCarousel isTablet={isTablet} isMobile={isMobile}  coursesData={coursesData}/>
     </Container>
   );
 }
