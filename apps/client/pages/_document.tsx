@@ -21,7 +21,12 @@ export default class CustomDocument extends Document<{
   render() {
     return (
       <Html>
-        <Head>{this.props.styleTags}</Head>
+        <Head>
+          <>
+            {this.props.styleTags}
+            <title>Marketplace</title>
+          </>
+        </Head>
         <body>
           <Main />
           <NextScript />

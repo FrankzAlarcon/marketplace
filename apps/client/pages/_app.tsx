@@ -1,11 +1,15 @@
 import { AppProps } from 'next/app';
-import './styles.css';
-import '../styles/global.css'
+import '../styles/global.css';
+import { Layout } from '@components/layout/Layout';
+
 
 function CustomApp({ Component, pageProps }: AppProps) {
+  
   return (
     <>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

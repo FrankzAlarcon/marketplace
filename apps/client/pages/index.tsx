@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { Container, Row, Image, Button } from 'react-bootstrap'
 
 export function Index() {
