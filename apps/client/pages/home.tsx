@@ -97,7 +97,7 @@ const Home = () => {
       console.log(isDesktop)
     })
   }, [])
-  return (
+  return ( 
     <Container className='d-flex flex-column align-items-center' style={{width: '100%'}}>
       <MainCarousel isDesktop={isDesktop} />
       <CardsCarousel isTablet={isTablet} isMobile={isMobile}  coursesData={coursesData}/>

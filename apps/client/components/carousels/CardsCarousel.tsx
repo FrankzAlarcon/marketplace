@@ -19,7 +19,8 @@ export function CardsCarousel({isMobile, isTablet, coursesData}) {
             const {src,title,teacher, text, price} = course;
             return (
               <Carousel.Item  key={`item-${index}`}>
-                <CourseCard key={`card-${index}`} src={src} title={title} teacher={teacher} text={text} price={price} tags={course.tags}/>
+                {/* Destructurar course */}
+                <CourseCard key={`card-${index}`}  src={src} title={title} teacher={teacher} text={text} price={price} tags={course.tags}/>
               </Carousel.Item>
               );
           })}
